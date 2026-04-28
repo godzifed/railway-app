@@ -1,72 +1,155 @@
-/* src/components/TrainCard.css */
+.train-card-uz {
+  display: flex;
+  background: #ffffff;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e5e7eb;
+}
 
-.train-card {
-  background-color: #ffffff;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Вимога: hover/transition */
+.uz-info-section {
+  flex: 2;
+  padding: 24px;
+  border-right: 1px solid #e5e7eb;
+}
+
+.uz-badges {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+.uz-train-number {
+  background: #273177;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 4px 0 0 4px;
+  font-weight: 600;
+}
+
+.uz-badge {
+  padding: 4px 12px;
+  color: white;
+  border-radius: 0 4px 4px 0;
+}
+
+.uz-badge.green { background: #38b2ac; }
+.uz-badge.purple { background: #9f7aea; }
+
+.uz-schedule {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.uz-time-block {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
-.train-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+.uz-time-block.left { align-items: flex-start; }
+.uz-time-block.right { align-items: flex-end; }
+
+.uz-time {
+  font-size: 24px;
+  font-weight: bold;
+  color: #111827;
 }
 
-.train-header {
-  border-bottom: 2px solid #1a365d; /* Темно-синій колір, схожий на фірмовий */
-  margin-bottom: 15px;
-  padding-bottom: 10px;
+.uz-date, .uz-city {
+  font-size: 14px;
+  color: #4b5563;
+  margin-top: 4px;
 }
 
-.train-header h3 {
-  margin: 0;
-  color: #1a365d;
-  font-size: 1.25rem;
+.uz-duration-block {
+  flex: 1;
+  margin: 0 20px;
+  position: relative;
+  top: -10px;
 }
 
-.train-body {
-  flex-grow: 1;
-  margin-bottom: 20px;
-  color: #333333;
-}
-
-.train-body p {
-  margin: 8px 0;
-  font-size: 0.95rem;
-}
-
-.train-body strong {
-  color: #555555;
-}
-
-.train-footer {
+.uz-duration-line {
   display: flex;
-  justify-content: stretch;
+  align-items: center;
+  justify-content: center;
 }
 
-.book-btn {
-  display: block;
-  width: 100%;
-  text-align: center;
-  background-color: #2b6cb0;
-  color: #ffffff;
-  padding: 10px 15px;
+.uz-dot {
+  width: 10px;
+  height: 10px;
+  border: 2px solid #273177;
+  border-radius: 50%;
+  background: white;
+}
+
+.uz-line {
+  flex: 1;
+  height: 2px;
+  background: #273177;
+}
+
+.uz-duration-text {
+  font-size: 12px;
+  color: #273177;
+  padding: 0 10px;
+  font-weight: 500;
+}
+
+.uz-route-details {
+  font-size: 14px;
+  color: #111827;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.uz-dropdown {
+  color: #2b6cb0;
+  margin-left: 10px;
+}
+
+/* Права частина з місцями */
+.uz-seats-section {
+  flex: 1;
+  display: flex;
+}
+
+.uz-seat-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 10px;
+  border-left: 1px solid #e5e7eb;
   text-decoration: none;
-  border-radius: 6px;
+  color: inherit;
+  transition: background 0.2s;
+}
+
+.uz-seat-card:hover {
+  background: #f9fafb;
+}
+
+.uz-seat-class {
+  font-size: 14px;
   font-weight: 600;
-  transition: background-color 0.2s ease;
+  color: #111827;
 }
 
-.book-btn:hover {
-  background-color: #2c5282;
+.uz-seat-count {
+  font-size: 12px;
+  color: #6b7280;
+  margin: 6px 0 12px 0;
 }
 
-.book-btn:focus {
-  outline: 2px solid #63b3ed;
-  outline-offset: 2px;
+.uz-seat-price {
+  font-size: 20px;
+  font-weight: bold;
+  color: #111827;
 }
