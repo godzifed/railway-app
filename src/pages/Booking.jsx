@@ -82,7 +82,7 @@ const Booking = () => {
 
       <div style={{ display: 'flex', gap: '30px' }}>
         {/* Ліва колонка: Вагони та Місця */}
-        <div style={{ flex: 2 }}>
+        <div style={{ flex: 2, minWidth: 0 }}>
           <WagonSelector 
             classes={train.seats} 
             selectedClass={selectedWagon} 

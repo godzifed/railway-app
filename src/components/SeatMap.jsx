@@ -21,7 +21,7 @@ const SeatMap = ({ capacity, bookedSeats, selectedSeats, onSeatToggle }) => {
   };
 
   return (
-    <div style={{ width: '100%', overflowX: 'auto', paddingBottom: '15px' }}>
+    <div className="seat-map-wrapper">
       
       {/* Легенда кольорів */}
       <div style={{ display: 'flex', gap: '20px', marginBottom: '20px', fontSize: '14px', color: '#4b5563' }}>

@@ -236,3 +236,28 @@ body {
   font-weight: 700;
   color: #111827;
 }
+
+/* Стилізація скрол-бару для вагону */
+.seat-map-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  padding-bottom: 15px;
+}
+
+.seat-map-wrapper::-webkit-scrollbar {
+  height: 8px; /* Тонкий скрол */
+}
+
+.seat-map-wrapper::-webkit-scrollbar-track {
+  background: #f3f4f6;
+  border-radius: 4px;
+}
+
+.seat-map-wrapper::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+.seat-map-wrapper::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
