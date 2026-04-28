@@ -11,7 +11,8 @@ const TrainList = () => {
     return (
       train.departureCity.toLowerCase().includes(query) ||
       train.arrivalCity.toLowerCase().includes(query) ||
-      train.trainNumber.toLowerCase().includes(query)
+      train.trainNumber.toLowerCase().includes(query) ||
+      train.routeDisplay.toLowerCase().includes(query)
     );
   });
 
